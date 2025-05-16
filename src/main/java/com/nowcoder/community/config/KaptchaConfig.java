@@ -13,7 +13,6 @@ public class KaptchaConfig {
 
     @Bean
     public Producer kaptchaProducer() {
-
         Properties properties = new Properties();
         properties.setProperty("kaptcha.image.width", "100");
         properties.setProperty("kaptcha.image.height", "40");
@@ -23,10 +22,10 @@ public class KaptchaConfig {
         properties.setProperty("kaptcha.textproducer.char.length", "4");
         properties.setProperty("kaptcha.noise.impl", "com.google.code.kaptcha.impl.NoNoise");
 
-
         DefaultKaptcha kaptcha = new DefaultKaptcha();
         Config config = new Config(properties);
         kaptcha.setConfig(config);
         return kaptcha;
     }
+
 }

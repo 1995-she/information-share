@@ -70,7 +70,7 @@
 							<input type="text" th:class="|form-control ${usernameMsg!=null?'is-invalid':''}|"
 								   th:value="${param.username}"
 								   id="username" name="username" placeholder="请输入您的账号!" required>
-							<div class="invalid-feedback"th:text="${usernameMsg}">
+							<div class="invalid-feedback" th:text="${usernameMsg}">
 								该账号不存在!
 							</div>
 						</div>
@@ -81,7 +81,7 @@
 							<input type="password" th:class="|form-control ${passwordMsg!=null?'is-invalid':''}|"
 								   th:value="${param.password}"
 								   id="password" name="password" placeholder="请输入您的密码!" required>
-							<div class="invalid-feedback"th:text="${passwordMsg}">
+							<div class="invalid-feedback" th:text="${passwordMsg}">
 								密码长度不能小于8位!
 							</div>							
 						</div>
@@ -186,9 +186,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 	<script th:src="@{/js/global.js}"></script>
 	<script>
-		// 刷新验证码
-		function refresh_kaptcha(){
-		var path = CONTEXT_PATH + "/kaptcha?p=" + Math.random();
+		function refresh_kaptcha() {
+			var path = CONTEXT_PATH + "/kaptcha?p=" + Math.random();
 			$("#kaptcha").attr("src", path);
 		}
 	</script>
